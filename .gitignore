@@ -1,40 +1,65 @@
-# For PCBs designed using KiCad: https://www.kicad.org/
-# Format documentation: https://kicad.org/help/file-formats/
+# --- KiCad ---
 
-# Temporary files
-*.000
-*.bak
-*.bck
+# Archivos de respaldo (Backups)
+*-backups/
 *.kicad_pcb-bak
 *.kicad_sch-bak
-*-backups
-*-cache*
-*-bak
-*-bak*
-*~
-~*
-_autosave-*
-\#auto_saved_files\#
-*.tmp
-*-save.pro
-*-save.kicad_pcb
+*.bak
+*.kicad_pro.bak
+
+# Archivos de caché y temporales
 fp-info-cache
-~*.lck
-\#auto_saved_files#
+*.tmp
+_autosave-*
 
-# Netlist files (exported from Eeschema)
-*.net
-
-# Autorouter files (exported from Pcbnew)
-*.dsn
-*.ses
-
-# Exported BOM files
-*.xml
-*.csv
-
-# Archived Backups (KiCad 6.0)
-**/*-backups/*.zip
-
-# Local project settings
+# Archivos de configuración local del proyecto (no deben compartirse)
+# Contienen rutas locales, ventanas abiertas, etc.
 *.kicad_prl
+
+# Archivos de bloqueo (Lock files)
+*.lck
+*.~*
+
+# --- Salidas Generadas (Fabricación, Plot, BOMs) ---
+
+# Archivos ZIP (como tu 'fabrication.zip')
+# Si usas zips para otras cosas que SÍ quieres versionar,
+# cambia "*.zip" por el nombre específico "fabrication.zip"
+*.zip
+
+# Archivos de Fabricación (Gerbers, Taladros)
+*.gbr
+*.gbl
+*.gbs
+*.gbp
+*.gbo
+*.gko
+*.gm*
+*.gtl
+*.gts
+*.gtp
+*.gto
+*.drl
+*.drd
+*.dxf
+*.ncd
+*.pho
+*.g[0-9][0-9]
+
+# Reportes, BOMs y archivos de posición (si se generan automáticamente)
+*.rpt
+*.csv
+*.xml
+*.txt
+*.log
+*.pos
+*.xy
+
+# Archivos de Plot (PDF, SVG, etc., si son generados)
+*.pdf
+*.plt
+*.svg
+
+# Archivos de Simulación
+*.cir
+
